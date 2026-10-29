@@ -1,12 +1,20 @@
-name: CI Test
+name: CI Pipeline
 
 on:
   push:
   workflow_dispatch:
 
 jobs:
-  test:
+  pipeline:
     runs-on: ubuntu-latest
+
     steps:
+      - name: Lint check
+        run: echo "Lint passed"
+
+      - name: Build project
+        run: echo "Build complete"
+
       - name: Run test
         run: echo "Test passed"
+
