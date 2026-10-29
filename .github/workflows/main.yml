@@ -1,7 +1,10 @@
 name: CI Test
-on: push: workflow_dispatch:
-jobs: test: runs-on: ubuntu-latest
 
+on: [push, workflow_dispatch]
+
+jobs:
+test:
+runs-on: ubuntu-latest
 steps:
-  - name: Run test
-    run: echo "Test passed"
+- name: Run test
+run: echo "Test passed"15:30
